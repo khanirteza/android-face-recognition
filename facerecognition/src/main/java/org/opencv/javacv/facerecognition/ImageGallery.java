@@ -1,21 +1,11 @@
 package org.opencv.javacv.facerecognition;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FilenameFilter;
-import java.io.InputStream;
-
-import org.opencv.javacv.facerecognition.R;
-
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
-import android.os.Environment;
-//import android.provider.MediaStore.Files;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,6 +21,14 @@ import android.widget.ImageSwitcher;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.ViewSwitcher;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FilenameFilter;
+import java.io.InputStream;
+
+//import android.provider.MediaStore.Files;
 
 public class ImageGallery extends Activity implements
         AdapterView.OnItemSelectedListener, ViewSwitcher.ViewFactory {

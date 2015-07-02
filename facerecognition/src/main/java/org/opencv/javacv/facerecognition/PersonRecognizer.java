@@ -1,28 +1,24 @@
 package org.opencv.javacv.facerecognition;
 
-import static com.googlecode.javacv.cpp.opencv_highgui.*;
-import static com.googlecode.javacv.cpp.opencv_core.*;
+import android.graphics.Bitmap;
+import android.util.Log;
 
-import static com.googlecode.javacv.cpp.opencv_imgproc.*;
-import static com.googlecode.javacv.cpp.opencv_contrib.*;
-
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.FilenameFilter;
-import java.util.ArrayList;
+import com.googlecode.javacv.cpp.opencv_contrib.FaceRecognizer;
+import com.googlecode.javacv.cpp.opencv_core.IplImage;
+import com.googlecode.javacv.cpp.opencv_core.MatVector;
+import com.googlecode.javacv.cpp.opencv_imgproc;
 
 import org.opencv.android.Utils;
 import org.opencv.core.Mat;
 
-import com.googlecode.javacv.cpp.opencv_imgproc;
-import com.googlecode.javacv.cpp.opencv_contrib.FaceRecognizer;
-import com.googlecode.javacv.cpp.opencv_core.IplImage;
-import com.googlecode.javacv.cpp.opencv_core.MatVector;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.FilenameFilter;
 
-import android.graphics.Bitmap;
-import android.os.Environment;
-import android.util.Log;
-import android.widget.Toast;
+import static com.googlecode.javacv.cpp.opencv_core.IPL_DEPTH_8U;
+import static com.googlecode.javacv.cpp.opencv_highgui.cvLoadImage;
+import static com.googlecode.javacv.cpp.opencv_imgproc.CV_BGR2GRAY;
+import static com.googlecode.javacv.cpp.opencv_imgproc.cvCvtColor;
 
 public class PersonRecognizer {
 
