@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="CameraBridgeViewBase"><attr format="boolean" name="show_fps"/><attr format="integer" name="camera_id"><enum name="any" value="-1"/><enum name="back" value="99"/><enum name="front" value="98"/></attr></declare-styleable>
-    <!-- From: file:/D:/AndroidProjects/face-recognition/facerecognition/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/Irteza/Desktop/Irteza/StudioProjects/android-face-recognition/facerecognition/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="BLANK"/>
     <string name="SBackCamera">Back Camera</string>

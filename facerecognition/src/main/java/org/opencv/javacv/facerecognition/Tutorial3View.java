@@ -20,7 +20,7 @@ public class Tutorial3View extends JavaCameraView {
 
     public Tutorial3View(Context context, AttributeSet attrs) {
         super(context, attrs);
-     
+
     }
 
     public List<String> getEffectList() {
@@ -45,52 +45,50 @@ public class Tutorial3View extends JavaCameraView {
         return mCamera.getParameters().getSupportedPreviewSizes();
     }
 
+    public void setResolution(int w, int h) {
+        disconnectCamera();
+        mMaxHeight = h;
+        mMaxWidth = w;
+
+        connectCamera(getWidth(), getHeight());
+    }
+
+    public void setAutofocus() {
+        Camera.Parameters parameters = mCamera.getParameters();
+        parameters.setFocusMode(Camera.Parameters.FOCUS_MODE_CONTINUOUS_VIDEO);
+//    	 if (parameters.isVideoStabilizationSupported())
+//         {
+//      	   parameters.setVideoStabilization(true);
+//         }
+        mCamera.setParameters(parameters);
+
+    }
+
+    public void setCamFront() {
+        disconnectCamera();
+        setCameraIndex(org.opencv.android.CameraBridgeViewBase.CAMERA_ID_FRONT);
+        connectCamera(getWidth(), getHeight());
+    }
+
+    public void setCamBack() {
+        disconnectCamera();
+        setCameraIndex(org.opencv.android.CameraBridgeViewBase.CAMERA_ID_BACK);
+        connectCamera(getWidth(), getHeight());
+    }
+
+    public int numberCameras() {
+        return Camera.getNumberOfCameras();
+    }
+
+    public Size getResolution() {
+        return mCamera.getParameters().getPreviewSize();
+    }
+
     public void setResolution(Size resolution) {
         disconnectCamera();
         mMaxHeight = resolution.height;
         mMaxWidth = resolution.width;
         connectCamera(getWidth(), getHeight());
-    }
-    
-    public void setResolution(int w,int h) {
-        disconnectCamera();
-        mMaxHeight = h;
-        mMaxWidth = w;
-       
-        connectCamera(getWidth(), getHeight());
-    }
-    
-    public void setAutofocus()
-    {
-    	Camera.Parameters parameters = mCamera.getParameters();
-    	parameters.setFocusMode(Camera.Parameters.FOCUS_MODE_CONTINUOUS_VIDEO);
-//    	 if (parameters.isVideoStabilizationSupported())
-//         {
-//      	   parameters.setVideoStabilization(true);
-//         }
-    	 mCamera.setParameters(parameters);
-		     
-    }
-    public void setCamFront()
-    {
-    	 disconnectCamera();
-    	 setCameraIndex(org.opencv.android.CameraBridgeViewBase.CAMERA_ID_FRONT );
-    	 connectCamera(getWidth(), getHeight());
-    }
-    public void setCamBack()
-    {
-    	 disconnectCamera();    	 
-    	 setCameraIndex(org.opencv.android.CameraBridgeViewBase.CAMERA_ID_BACK );
-    	 connectCamera(getWidth(), getHeight());
-    }
-
-    public int numberCameras()
-    {
-     return	Camera.getNumberOfCameras();
-    }
-    
-    public Size getResolution() {
-        return mCamera.getParameters().getPreviewSize();
     }
 
     public void takePicture(final String fileName) {

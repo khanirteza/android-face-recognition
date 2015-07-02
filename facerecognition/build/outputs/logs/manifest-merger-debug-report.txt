@@ -1,6 +1,8 @@
 -- Merging decision tree log ---
 manifest
 ADDED from AndroidManifest.xml:2:1
+	xmlns:android
+		ADDED from AndroidManifest.xml:2:11
 	package
 		ADDED from AndroidManifest.xml:3:11
 		INJECTED from AndroidManifest.xml:0:0
@@ -11,8 +13,6 @@ ADDED from AndroidManifest.xml:2:1
 		ADDED from AndroidManifest.xml:4:11
 		INJECTED from AndroidManifest.xml:0:0
 		INJECTED from AndroidManifest.xml:0:0
-	xmlns:android
-		ADDED from AndroidManifest.xml:2:11
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
 ADDED from AndroidManifest.xml:6:5
 	android:name
@@ -67,19 +67,19 @@ ADDED from AndroidManifest.xml:28:3
 		ADDED from AndroidManifest.xml:28:13
 supports-screens
 ADDED from AndroidManifest.xml:34:5
-	android:largeScreens
-		ADDED from AndroidManifest.xml:37:23
-	android:smallScreens
-		ADDED from AndroidManifest.xml:35:23
-	android:normalScreens
-		ADDED from AndroidManifest.xml:36:23
 	android:resizeable
 		ADDED from AndroidManifest.xml:34:23
+	android:largeScreens
+		ADDED from AndroidManifest.xml:37:23
 	android:anyDensity
 		ADDED from AndroidManifest.xml:38:23
+	android:normalScreens
+		ADDED from AndroidManifest.xml:36:23
+	android:smallScreens
+		ADDED from AndroidManifest.xml:35:23
 uses-sdk
 ADDED from AndroidManifest.xml:40:5
-MERGED from face-recognition:openCVLibrary2410:unspecified:7:5
+MERGED from android-face-recognition:openCVLibrary2410:unspecified:7:5
 	android:targetSdkVersion
 		INJECTED from AndroidManifest.xml:0:0
 		INJECTED from AndroidManifest.xml:0:0
